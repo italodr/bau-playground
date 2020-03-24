@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Poiret One', cursive;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.1;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: DarkSalmon;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: line-through;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 75rem;
+    padding: 0 1rem;
+}
+
+.reading {
+    max-width: 52rem;
+}
+
+.hero {
+    background: CornflowerBlue;
+    height: 100vh;
+    position: relative;
+}
+
+.hero__scroll {
+    bottom: 0.5rem;
+    left: 1rem;
+    position: absolute;
+}
+
+.hero__scroll svg {
+    display: block;
+    width: 32px;
+}
+
+.hero__scroll path {
+    fill: white;
+}
+
+.hero .title {
+    color: white;
+    display: block;
+    font-size: 4rem;
+    left: 50%;
+    letter-spacing: 1rem;
+    position: absolute;
+    text-transform: uppercase;
+    top: 40%;
+    transform: translateX(-50%);
+}
+
+/*
+ Elementos separados del `.hero` para poder utilizarlo independientemente en
+ cualquier página y/o elemento
+ `.square` y `.bg`
+*/
+.square::before {
+    background: MediumOrchid;
+    content: '';
+    display: block;
+    height: 200px;
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 200px;
+}
+
+.bg {
+    background-image: url(mushroom.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 100px;
+}
+
+section,
+.footer {
+    min-height: 100vh;
+    padding: 8rem 0;
+}
+
+.footer {
+    background: DarkSlateGray;
+    color: white;
+}
+
+.nav {
+    background: DarkCyan;
+    height: 100vh;
+    z-index: 2;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    transition: right 0.25s ease-in-out;
+    width: 320px;
+    will-change: right;
+}
+
+.menu-open .nav {
+    right: 0;
+}
+
+.nav a {
+    background: transparent;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.25);
+    color: white;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    will-change: background, color;
+}
+
+.nav a:hover {
+    background: LightSteelBlue;
+    color: black;
+}
+
+.grid__column {
+    background: Pink;
+    margin: 0 0 1rem;
+}
+
+/*
+ La siguiente opción de CSS está añadiendo un margen de 1rem debajo de todos los
+ elementos con clase `.project` exceptuando (:not) el último (:last-child).
+*/
+.project:not(:last-child) {
+    margin: 0 0 1rem;
+}
+
+.project img {
+    margin: 0 0 0.25rem;
+}
+
+@media (min-width: 520px) {
+    .grid {
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .grid__column {
+        width: calc((100% - 1rem) / 2);
+    }
+}
+
+@media (min-width: 768px) {
+    .grid__column {
+        width: calc((100% - 3rem) / 4);
+    }
+}
+
+.highlight {
+    background: Pink;
+}
+
+/*
+ Estilos específicos para Swiper slider
+*/
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}
+
+.swiper-pagination-bullet-active {
+    background: red;
+}
+
+.swiper-container-horizontal
+    > .swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 8px;
+}
+
+.swiper-button-prev::after,
+.swiper-container-rtl .swiper-button-next::after {
+    content: none;
+}
+
+/*
+ Media queries y responsive
+*/
+@media (min-width: 640px) {
+    .bg {
+        background-position: right bottom;
+    }
+}
+
+@media (min-width: 960px) {
+    .title span {
+        display: block;
+    }
+}

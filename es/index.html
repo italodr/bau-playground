@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sample</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/css/swiper.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="../styles.css" />
+    </head>
+    <body>
+        <nav class="nav">
+            <ul>
+                <li><a href="#about" class="js-anchor">About</a></li>
+                <li><a href="#projects" class="js-anchor">Projects</a></li>
+                <li><a href="#contact" class="js-anchor">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero square bg">
+            <div class="wrapper">
+                <button class="menu">MENU TOGGLER</button>
+                <div class="title">
+                    Cuarentena yo me <span>quedo</span> en casa en carpeta ES
+                </div>
+                <a href="#about" class="hero__scroll js-anchor">
+                    <svg
+                        viewBox="0 0 482.239 482.239"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M0 447.793h482.239v34.446H0zM396.091 223.863l-24.287-24.354-113.462 113.462V0h-34.446v312.971L110.401 199.475l-24.22 24.354 154.938 155.073z"
+                        />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="wrapper reading">
+                <h1>Frontend at BAU</h1>
+                <h2>Subtítulo</h2>
+                <a href="">link</a>
+                <a href="">link2</a>
+                <span>span element</span>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Natus distinctio non in,
+                    <span class="highlight">cumque</span>, enim quibusdam
+                    numquam, consequatur eos, omnis harum fugit voluptas id
+                    suscipit labore eius. Nostrum fugit assumenda illo!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Natus distinctio non in, <a href="">cumque</a>, enim
+                    quibusdam numquam, consequatur eos, omnis harum fugit
+                    voluptas id suscipit labore eius. Nostrum fugit assumenda
+                    illo!
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrapper">
+                <h2>Ejemplo de slider con Swiper</h2>
+            </div>
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev">Hola</div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <a href="project.html">Go to project</a>
+        </section>
+
+        <footer id="contact" class="footer">
+            <div class="wrapper reading">
+                <h2>Contáctame</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Saepe temporibus dolor, ipsam sunt!
+                    <a href="mailto:italodr@gmail.com">italodr@gmail.com</a>
+                </p>
+            </div>
+        </footer>
+
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"
+        ></script>
+
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <script src="../app.js"></script>
+    </body>
+</html>
