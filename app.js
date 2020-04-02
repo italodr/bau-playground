@@ -57,7 +57,7 @@ $('.js-anchor').on('click', function(event) {
     */
     $('html, body').animate(
         {
-            scrollTop: $(target).offset().top
+            scrollTop: $(target).offset().top,
         },
         1500
     );
@@ -67,7 +67,12 @@ $('.js-anchor').on('click', function(event) {
  Configuración inicial y básica del swiper slider
 */
 var swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
     pagination: {
-        el: '.swiper-pagination'
-    }
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    cssMode: true,
+    mousewheel: true,
+    keyboard: true,
 });
