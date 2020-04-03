@@ -216,6 +216,19 @@ section,
     min-width: 250px;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col {
+    background: deepSkyBlue;
+    border: 1px solid white;
+    margin-bottom: 10px;
+    width: calc((100% - 10px) / 2);
+}
+
 @media (min-width: 520px) {
     .grid {
         align-items: flex-start;
@@ -227,11 +240,19 @@ section,
     .grid__column {
         width: calc((100% - 1rem) / 2);
     }
+
+    .col {
+        width: calc((100% - 20px) / 3);
+    }
 }
 
 @media (min-width: 768px) {
     .grid__column {
         width: calc((100% - 3rem) / 4);
+    }
+
+    .col {
+        width: 24%;
     }
 }
 
@@ -249,6 +270,10 @@ section,
     .responsive.scrollh .scrollh__content li {
         min-width: initial;
         width: 25%;
+    }
+
+    .col {
+        width: 19%;
     }
 }
 
