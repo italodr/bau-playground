@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin: 0 10px;
+  padding: 20px 20px 40px 20px;
+  width: 300px;
+  position: relative;
+}
+
+.card:before {
+  border-radius: 12px;
+  content: '';
+  background: lightgray;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 80px);
+  z-index: 0;
+}
+
+.card__image,
+.card__content {
+  position: relative;
+  z-index: 1;
+}
+
+.card__image {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.view-more {
+  position: absolute;
+  bottom: 20px;
+  z-index: 2;
+}
