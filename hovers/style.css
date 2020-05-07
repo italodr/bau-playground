@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.featured {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.article {
+  background: yellow;
+  display: block;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .article:hover h2 {
+    color: red;
+    text-decoration: none;
+    letter-spacing: 5px;
+  }
+
+  .article__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 40%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+  }
+
+  .article:hover .article__image {
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
